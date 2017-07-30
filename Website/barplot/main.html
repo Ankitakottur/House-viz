@@ -1,0 +1,72 @@
+<!doctype html>
+
+<html>
+<head>
+    <title>D3Viz</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="three.js"></script>
+    <script type="text/javascript" src="mercer.js"></script>
+</head>
+
+<body>
+    <div id="bar-chart-container" style="width:2000px;height:1500px;">
+         </div>
+
+    <script>
+ var barData = {
+                
+                barWidth:150,
+                barOpacity:1, 
+                //showBarLabels:false,
+                //barLabelSize:50, 
+                //barLabelColor:0x000000, 
+                //showrowLabel:false,
+                rowSpace:100, 
+                rowLabelSize:55,
+                //rowLabelColor:#ff0000, 
+                columnSpace:100,
+                columnLabelSize:5, 
+                //columnLabelColor:0x000000,
+
+
+
+                
+  //var barData= {
+                columnLabels: {
+                    values: [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "July", "Apr", "Sept", "Oct", "Nov", "Dec" ]
+                    },
+                    data: [{
+                title: "2013",
+                color: "#0000ff",
+                values: [ 100, 200, 400, 400, 300, 200, 200, 400, 400, 300, 200, 100 ]
+                }, {
+                title: "2014",
+                color: "#ff0000",
+                values: [ 300, 200, 200, 800, 100, 300, 200, 200, 800, 100, 300, 100 ]
+                }, {
+                title: "2015",
+                color: "#ff0000",
+                values: [ 170, 200, 150, 140, 140, 130, 120, 180, 110, 130, 120, 190 ]
+                }, {
+                title: "2016",
+                values: [ 120, 150, 100, 110, 120, 130, 120, 110, 110, 130, 120, 190 ]
+                }, {
+                title: "2017",
+                values: [ 170, 200, 150, 120, 140, 130, 120, 200, 110, 130, 120, 190 ]
+                }, {
+                title: "2018",
+                values: [ 100, 200, 150, 140, 140, 130, 120, 180, 110, 130, 120, 190 ]
+                }]
+           };
+           
+           
+            var barMercer = new Mercer(); 
+            barMercer.BarChart("bar-chart-container", barData);    
+    </script>
+
+</body>
+
+
+</html>
+
+
